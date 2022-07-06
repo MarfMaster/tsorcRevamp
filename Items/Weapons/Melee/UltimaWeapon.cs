@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace tsorcRevamp.Items.Weapons.Melee
 {
-    class UltimaWeapon : ModItem
+    class UltimaWeapon : ModItem //To be adjusted to actually work in shm
     {
 
         public override void SetStaticDefaults()
@@ -18,7 +18,7 @@ namespace tsorcRevamp.Items.Weapons.Melee
         public override void SetDefaults()
         {
             Item.rare = ItemRarityID.LightPurple;
-            Item.damage = 55;
+            Item.damage = 200;
             Item.height = 64;
             Item.width = 64;
             Item.knockBack = 14f;
@@ -33,9 +33,9 @@ namespace tsorcRevamp.Items.Weapons.Melee
         public override void AddRecipes()
         {
             Terraria.Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.NightsEdge, 1);
-            recipe.AddIngredient(ItemID.SoulofLight, 5);
-            recipe.AddIngredient(Mod.Find<ModItem>("DarkSoul").Type, 12000);
+            recipe.AddIngredient(ItemID.TerraBlade, 1);
+            recipe.AddIngredient(ItemID.LunarOre, 20);
+            recipe.AddIngredient(Mod.Find<ModItem>("DarkSoul").Type, 50000);
             recipe.AddTile(TileID.DemonAltar);
 
             recipe.Register();

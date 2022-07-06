@@ -9,7 +9,7 @@ namespace tsorcRevamp.Items.Armors
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Adds Double Jump & Jump Boost Skills\nYou are a master of the zen arts, at one with the Tao\nZen meditation adds amazing +13 Life Regen\nSet bonus also adds +20% Melee damage, +20% Melee Speed, +7% Melee Crit");
+            Tooltip.SetDefault("Adds Double Jump & Jump Boost Skills\nYou are a master of the zen arts, at one with the Tao\nSet bonus also adds +20% Melee damage, +20% Melee Speed, +7% Melee Crit and|nZen meditation adds amazing +13 Life Regen");
         }
 
         public override void SetDefaults()
@@ -30,7 +30,7 @@ namespace tsorcRevamp.Items.Armors
         public override void AddRecipes()
         {
             Terraria.Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.CobaltBreastplate, 1);
+            recipe.AddIngredient(ItemID.MythrilChainmail, 1);
             recipe.AddIngredient(Mod.Find<ModItem>("DarkSoul").Type, 3000);
             recipe.AddTile(TileID.DemonAltar);
 

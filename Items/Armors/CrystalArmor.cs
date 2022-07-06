@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 namespace tsorcRevamp.Items.Armors
 {
     [AutoloadEquip(EquipType.Body)]
-    public class CrystalArmor : ModItem
+    public class CrystalArmor : ModItem // Pending rework
     {
         public override void SetStaticDefaults()
         {
@@ -19,18 +19,6 @@ namespace tsorcRevamp.Items.Armors
             Item.defense = 20;
             Item.value = 7000000;
             Item.rare = ItemRarityID.Pink;
-        }
-
-
-        public override void AddRecipes()
-        {
-            Terraria.Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.CobaltBreastplate, 1);
-            recipe.AddIngredient(ItemID.CrystalShard, 30);
-            recipe.AddIngredient(Mod.Find<ModItem>("DarkSoul").Type, 3000);
-            recipe.AddTile(TileID.DemonAltar);
-
-            recipe.Register();
         }
     }
 }

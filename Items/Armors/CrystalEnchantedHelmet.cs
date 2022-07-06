@@ -8,7 +8,7 @@ namespace tsorcRevamp.Items.Armors
     [AutoloadEquip(EquipType.Head)]
     public class CrystalEnchantedHelmet : ModItem
     {
-        public override void SetStaticDefaults()
+        public override void SetStaticDefaults() //Pending rework
         {
             Tooltip.SetDefault("Dazzling armor cut from crystal\nWhen health falls below 80, magic damage increases 50% (20% above normal)\nHits also knock back foes with greater force");
         }
@@ -56,17 +56,6 @@ namespace tsorcRevamp.Items.Armors
             player.GetAttackSpeed(DamageClass.Melee) += 0.4f;
             player.GetDamage(DamageClass.Melee) += 0.15f;
             player.enemySpawns = true;
-        }
-
-        public override void AddRecipes()
-        {
-            Terraria.Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.CobaltHelmet, 1);
-            recipe.AddIngredient(ItemID.CrystalShard, 30);
-            recipe.AddIngredient(Mod.Find<ModItem>("DarkSoul").Type, 3000);
-            recipe.AddTile(TileID.DemonAltar);
-
-            recipe.Register();
         }
     }
 }
